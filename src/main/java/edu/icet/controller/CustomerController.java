@@ -12,6 +12,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @RequestMapping("/customer")
 @Tag(name = "Customer-Controller",description = "Customer API Collection...")
+@CrossOrigin
 public class CustomerController {
 
     final private CustomerService service;
@@ -40,6 +41,4 @@ public class CustomerController {
     public List<CustomerDto> getAll(){
         return service.getAll();
     }
-
-
 }
